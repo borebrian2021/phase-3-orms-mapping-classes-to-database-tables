@@ -10,20 +10,16 @@ describe Song do
 
   context "when initialized with a name and a albun" do
     let(:gold_digger) { Song.new(name: "Gold Digger", album: "Late Registration") }
-
     it 'the name attribute can be accessed' do
       expect(gold_digger.name).to eq("Gold Digger")
     end
-
     it 'the album attribute can be accessed' do
       expect(gold_digger.album).to eq("Late Registration")
     end
-
     it 'sets the initial value of id to nil' do
       expect(gold_digger.id).to eq(nil)
     end
   end
-
   describe ".create_table" do
     it 'creates the songs table in the database' do
       Song.create_table
